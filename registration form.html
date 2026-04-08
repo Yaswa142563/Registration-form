@@ -1,0 +1,116 @@
+
+<html>
+<head>
+<title>Registration form</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        width: 350px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    input:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    .error {
+        color: red;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background: #0056b3;
+    }
+
+    .success {
+        color: green;
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Registration form</h2>
+
+    <form id="registerForm">
+        <input type="text" id="name" placeholder="Full Name">
+        <div class="error" id="nameError"></div>
+
+        <input type="email" id="email" placeholder="Email">
+        <div class="error" id="emailError"></div>
+
+        <input type="password" id="password" placeholder="Password">
+        <div class="error" id="passwordError"></div>
+
+        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+        <div class="error" id="confirmError"></div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <div class="success" id="successMsg"></div>
+</div>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+
+    let valid = true;
+    document.getElementById("nameError");
+    document.getElementById("emailError");
+    document.getElementById("passwordError");
+    document.getElementById("confirmError");
+    document.getElementById("successMsg");
+
+    
+});
+</script>
+
+</body>
+</html>
